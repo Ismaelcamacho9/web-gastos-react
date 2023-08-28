@@ -10,7 +10,7 @@ const ControlPresupuesto = ({
         setIsValidPresupuesto
     }) => {
 
-    const [porcentaje, setPorcentaje] = useState(10)
+    const [porcentaje, setPorcentaje] = useState(0)
     const [disponible, setDisponible] = useState(0)
     const [gastado, setGastado] = useState(0)
 
@@ -56,8 +56,8 @@ const ControlPresupuesto = ({
                         trailColor: '#F5F5F5',
                         textColor: porcentaje > 100 ? '#DC2626' : '#3B82F6',
                     })}
-                    value={porcentaje}
-                    text={`${porcentaje}% Gastado`}
+                    value={Math.floor(porcentaje)}
+                    text={`${Math.floor(porcentaje)}% Gastado`}
                 />
             </div>
 

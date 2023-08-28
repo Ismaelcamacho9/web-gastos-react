@@ -21,6 +21,12 @@ const NuevoPresupuesto = ({
         
     }
 
+    const handleInputClick = () => {
+        if (presupuesto === 0) {
+            setPresupuesto('');
+        }
+    };
+
     return (
         <div className="contenedor-presupuesto contenedor sombra">
             
@@ -33,6 +39,7 @@ const NuevoPresupuesto = ({
                         type="number"
                         placeholder="Añade tu Presupuesto"
                         value={presupuesto}
+                        onClick={handleInputClick}
                         onChange={ e => setPresupuesto(Number(e.target.value))}
                     />
                 </div>
